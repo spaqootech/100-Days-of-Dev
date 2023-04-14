@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>todo list Pro</title>
+</head>
+<body>
+  
+    <h1>TODO List</h1>
+    <input type="text" placeholder="Enter your task">
+    <button>Add</button>
+    <ul>
+    </ul>
+    
+    <script>
+      const todoInput = document.querySelector('input');
+      const addButton = document.querySelector('button');
+      const todoList = document.querySelector('ul');
+
+      addButton.addEventListener('click', function () {
+        if (todoInput.value !== '') {
+          const newTodo = document.createElement('li');
+          newTodo.innerText = todoInput.value;
+          todoList.appendChild(newTodo);
+          todoInput.value = '';
+        }
+      });
+
+      todoList.addEventListener('click', function (event) {
+        if (event.target.tagName === 'LI') {
+          event.target.classList.toggle('completed');
+        }
+      });
+
+    </script>
+
+</body>
+</html>

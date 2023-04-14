@@ -1,0 +1,25 @@
+<button id="btn1"></button>
+<button id="btn2"></button>
+<button id="btn3"></button>
+<script>
+  const btn1 = document.getElementById(`btn1`);
+  const btn2 = document.getElementById(`btn2`);
+  const btn3 = document.getElementById(`btn3`);
+  const buttons = document.querySelectorAll(`button`);
+
+  // btn1.onclick = () => alert(`alert`);
+  buttons.forEach(buttons => {buttons.onclick = () => alert(`alert`) });
+</script>
+
+<style>
+  button{
+    height: 300px;
+    width: 400px;
+    border-width: 30px;
+    margin: 150px 50px;
+    border-radius: 30px;
+  }
+  #btn1{background-color: dodgerblue;}
+  #btn2{background-color: purple;}
+  #btn3{background-color: salmon;}
+</style>
